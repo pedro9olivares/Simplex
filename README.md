@@ -85,8 +85,11 @@ Nuestro módulo `Simplex.py` cuenta con tres funciones que están debidamente co
  Una vez traducido a su forma estándar
  
  <img width="448" alt="image" src="https://user-images.githubusercontent.com/61219691/234362502-f52df373-b88b-46fa-9351-fa2631d9fd25.png">
-
-obtenemos que se llega a un punto en el cual no podemos determinar sobre que renglón pivotear, pues la columna entrante tiene puras entradas negativas. Por lo tanto, alzamos una excepción y paramos (si intentamos elegir otra columna entrante más hacia la derecha, la regla de Bland se rompe y el Simplex cicla infinitamente).
+ 
+ obtenemos que
+ 
+ 
+ es decir, obtenemos que se llega a un punto en el cual no podemos determinar sobre que renglón pivotear, pues la columna entrante tiene puras entradas negativas. Por lo tanto, alzamos una excepción y paramos, ya que el problema es no acotado (si intentamos elegir otra columna entrante más hacia la derecha, la regla de Bland se rompe y el Simplex cicla infinitamente).
  
  ### Problema B
  <img width="178" alt="image" src="https://user-images.githubusercontent.com/61219691/234179445-2b5f88d7-7c6b-437d-a55c-f66ccd07151a.png">
