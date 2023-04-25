@@ -1,5 +1,5 @@
 # Simplex
-Implementación del método Simplex (de dos fases) para el proyecto de Programación Lineal (primavera 2023).
+Implementación del método Simplex (de dos fases) para el proyecto de Programación Lineal, primavera 2023.
 
 Desarrollado por:
 - Pedro Olivares 190198
