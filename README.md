@@ -67,3 +67,8 @@ Nuestro módulo `Simplex.py` cuenta con tres funciones que están debidamente co
     - Con la matriz **A'** y vector de recursos **b'** obtenidos de la Fase 1, correr Simplex y regresar sus resultados. 
  
  ## Problemas
+ ### Problema A
+ 
+ ### Problema B
+ 
+ ### Problema C
