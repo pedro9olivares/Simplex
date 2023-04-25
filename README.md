@@ -75,7 +75,21 @@ Nuestro módulo `Simplex.py` cuenta con tres funciones que están debidamente co
  
  ## Problemas
  ### Problema A
+ <img width="194" alt="image" src="https://user-images.githubusercontent.com/61219691/234179490-f1b66a2e-6fdc-4de7-89d5-e9c85a31515c.png">
  
  ### Problema B
+ <img width="178" alt="image" src="https://user-images.githubusercontent.com/61219691/234179445-2b5f88d7-7c6b-437d-a55c-f66ccd07151a.png">
+ 
+ Una vez traducido a su forma estándar
+ 
+ <img width="513" alt="image" src="https://user-images.githubusercontent.com/61219691/234180324-4b6b05de-5d12-49ee-82bc-4aa5a7896fe1.png">
+ 
+obtenemos que
+
+<img width="379" alt="image" src="https://user-images.githubusercontent.com/61219691/234180372-79f1935e-f43e-4fa4-abdb-8fbeefe8d8ed.png">
+
+
  
  ### Problema C
+ <img width="199" alt="image" src="https://user-images.githubusercontent.com/61219691/234179477-7ef07c79-f606-476f-984a-b22b4461b039.png">
+
