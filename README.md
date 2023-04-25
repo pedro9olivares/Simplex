@@ -40,6 +40,7 @@ Se decidió implementar el método Simplex de dos fases en Python por su simplic
 
 ### Caveats
 - Por cómo numpy maneja la aritmética de punto flotante, fue necesario introducir un redondeo manual cuando hay operaciones con resultados en el intervalo (-2 x 10^-15, 0). Numpy representa aquellos valores que están muy cerca del 0 (valores menores a -1 x 10^-16) como -0.0, lo que hacía al algoritmo fallar al momento de seleccionar qué variable habría de entrar; por ello fue necesario redondear. 
+- Las matrices y arreglos de numpy deben ser de tipo `float`.
 
 ## Pseudocódigo
 
