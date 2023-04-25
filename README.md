@@ -13,7 +13,9 @@ Implementación del método Simplex (de dos fases) para el proyecto de Progrmaci
 4. Especificar los parámetros que usará el Simplex. Estos son `m`, el número de restricciones; `n`, el número de variables objetivo; `matriz`, una matriz de numpy que representa las restricciones del problema (sin recursos)< `costos`, una matriz de numpy que representa el vector de costos; `recursos`, una matriz de numpy que representa el vector columna de recursos del problema (para que el método funcione, es necesario agregar manualmente un 0 al final de este vector, el cual representa la entrada z_0 de nuestra tabla Simplex). 
 
 Ejemplo de uso:
+
 <img width="444" alt="image" src="https://user-images.githubusercontent.com/61219691/234157265-1b3f6970-bf4a-4b2c-a2a3-dac25596121b.png">
+
 El parámetro `debug` en `True` hará que se impriman todas las tablas Simplex usadas para llegar a la solución (si existe). Si solo se desea obtener el resultado final, ponerlo en `False`.
 Los resultados que regresa el método son: la tabla Simplex final, la solución óptima x, el valor de la función objetivo en la solución óptima z, la matriz de restricciones alterada A', el vector de recursos alterado b' y el vector de costos relativos r.
 
