@@ -48,22 +48,22 @@ Nuestro módulo `Simplex.py` cuenta con tres funciones que están debidamente co
 2. Si `debug` está en `True`, imprimir en consola cada tabla que se vaya generando e indicar que variables entran y salen.
 3. Pasar de la tabla incial a la tabla 1: apoyándose de la función `_is_canonical_vector()`, vuelve cero el costo relativos de las columnas canónicas.
 4. Mientras haya costos relativos negativos, aplicar Simplex con regla de Bland.
-  - Si ya se hicieron más de 100,000 iteraciones Simplex parar y alzar excepción: casi seguramente el problema es no acotado.
-  - Obtener el índice de la columna entrante: aquella con costo relativo 0 y que esté más a la izquierda.
-  - Obtener el índice del renglón que pivoteará: aquel con división positiva entre el correspondiente elemento de la columna de recursos menor. Si hay empate, seleccionar el índice menor entre estos.
-  - Pivotear sobre la columna y renglón.
-  - En el renglón de costos relativos, pasar de -0.0 a 0.0
+    - Si ya se hicieron más de 100,000 iteraciones Simplex parar y alzar excepción: casi seguramente el problema es no acotado.
+    - Obtener el índice de la columna entrante: aquella con costo relativo 0 y que esté más a la izquierda.
+    - Obtener el índice del renglón que pivoteará: aquel con división positiva entre el correspondiente elemento de la columna de recursos menor. Si hay empate, seleccionar el índice menor entre estos.
+    - Pivotear sobre la columna y renglón.
+    - En el renglón de costos relativos, pasar de -0.0 a 0.0
 5. Obtener la solución óptima.
-  - Si hay más de `m` columnas básicas y no se está aplicando el método como **fase 1** (para esto, se utiliza una bandera booleana `fase_1`), imprimir en consola que existen infinitas soluciones óptimas.
-  - En otro caso, imprimir en consola que se encontró una solución óptima y armar el vector correspondiente.
+    - Si hay más de `m` columnas básicas y no se está aplicando el método como **fase 1** (para esto, se utiliza una bandera booleana `fase_1`), imprimir en consola que existen infinitas soluciones óptimas.
+    - En otro caso, imprimir en consola que se encontró una solución óptima y armar el vector correspondiente.
 6. Regresar los resultados relevantes (la tabla Simplex final, la solución óptima x, el valor de la función objetivo en la solución óptima z, la matriz de restricciones alterada A', el vector de recursos alterado b' y el vector de costos relativos r).
 
 **Función que implementa el método de las dos fases** `simplex_dos_fases(m: int , n: int, matriz: List[List[float]], costos: List[List[float]], recursos: List[List[float]], debug:bool = False) -> Tuple[np.array, np.array, int, np.array, np.array, np.array]`
 1. Fase 1
-  - Armar la tabla Simplex que contiene a la identidad gracias a las y's. 
-  - Generar el vector de costos correspondiente a la suma de las y's.
-  - Aplicar `simplex_estandar`, usando los dos objetos generados en lugar de `matriz` y `costos`: Si obtenemos que **z** es diferente de 0, parar,pues la región factible del P.P.L. es vacía. Si no, continuar a la Fase 2
+    - Armar la tabla Simplex que contiene a la identidad gracias a las y's. 
+    - Generar el vector de costos correspondiente a la suma de las y's.
+    - Aplicar `simplex_estandar`, usando los dos objetos generados en lugar de `matriz` y `costos`: Si obtenemos que **z** es diferente de 0, parar,pues la región factible del P.P.L. es vacía. Si no, continuar a la Fase 2
 2. Fase 2
-  - Con la matriz **A'** y vector de recursos **b'** obtenidos de la Fase 1, correr Simplex y regresar sus resultados. 
+    - Con la matriz **A'** y vector de recursos **b'** obtenidos de la Fase 1, correr Simplex y regresar sus resultados. 
  
  ## Problemas
