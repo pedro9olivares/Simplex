@@ -18,20 +18,24 @@ Desarrollado por:
 1. Instalar numpy: `pip install numpy`.
 2. Descargar el archivo `Simplex.py` y colocarlo en la misma carpeta donde se trabajará.
 3. En un archivo de Python, importar el método Simplex de las dos fases (`from Simplex import simplex_dos_fases`), e importar numpy (`import numpy as np`).
-4. Especificar los parámetros que usará el Simplex. Estos son `m`, el número de restricciones; `n`, el número de variables objetivo; `matriz`, una matriz de numpy que representa las restricciones del problema (sin recursos); `costos`, una matriz de numpy que representa el vector de costos; `recursos`, una matriz de numpy que representa el vector columna de recursos del problema (para que el método funcione, es necesario agregar manualmente un 0 al final de este vector, el cual representa la entrada z_0 de nuestra tabla Simplex). 
+4. Especificar los parámetros que usará el Simplex. Estos son `m`, el número de restricciones; `n`, el número de variables objetivo; `matriz`, una matriz de numpy que representa las restricciones del problema (sin recursos); `costos`, una matriz de numpy que representa el vector de costos y `recursos`, una matriz de numpy que representa el vector columna de recursos del problema (para que el método funcione, es necesario agregar manualmente un 0 al final de este vector, el cual representa la entrada z_0 de nuestra tabla Simplex).
+5. Ejecutar `simplex_dos_fases()` con estos parámetros.
 
 Ejemplo de uso:
 
 <img width="444" alt="image" src="https://user-images.githubusercontent.com/61219691/234157265-1b3f6970-bf4a-4b2c-a2a3-dac25596121b.png">
 
+Los resultados que regresa el método son: la **tabla Simplex final** (`np.array`), la solución óptima **x** (`np.array`), el valor de la función objetivo en la solución óptima **z** (`int`), la matriz de restricciones alterada **A'** (`np.array`), el vector de recursos alterado **b'** (`np.array`) y el vector de costos relativos **r** (`np.array`).
+
 El parámetro `debug` en `True` hará que se impriman todas las tablas Simplex usadas para llegar a la solución (si existe). Si solo se desea obtener el resultado final, ponerlo en `False`.
-Los resultados que regresa el método son: la **tabla Simplex final**, la solución óptima **x**, el valor de la función objetivo en la solución óptima **z**, la matriz de restricciones alterada **A'**, el vector de recursos alterado **b'** y el vector de costos relativos **r.**
 
 Si el P.P.L. introducido es **no acotado,** se alza una excepción y el método no acaba. Si el P.P.L. tiene una **infinidad de soluciones óptimas,** se notifica al usuario y se regresa la primer solución óptima a la que se llegó.
 
 ## Explicación
 
-Se decidió implementar el método Simplex de dos fases en Python por su simplicidad y por el poder que nos otorga el cálculo vectorizado la librería numpy. A su vez, se optó por implementar el método de las dos fases en lugar del método de la gran M por la posibilidad de modularizar el código: tener una implementación del Simplex estándar permitiría casi inmediatamente implementar el método de las dos fases, pues cada fase utiliza el Simplex con unas pocas restricciones.
+Se decidió implementar el método Simplex de dos fases en Python por su simplicidad y por el poder que nos otorga el cálculo vectorizado la librería numpy. 
+
+A su vez, se optó por implementar el método de las dos fases en lugar del método de la gran M por la posibilidad de modularizar el código: tener una implementación del Simplex estándar permitiría casi inmediatamente implementar el método de las dos fases, pues cada fase utiliza el Simplex, pero con diferentes parámetros.
 
 ### Supuestos
 - Desarrollamos nuestros métodos pensando en que siempre se introducirán los P.P.L.s en su forma estándar.
