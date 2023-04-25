@@ -19,3 +19,9 @@ Ejemplo de uso:
 El parámetro `debug` en `True` hará que se impriman todas las tablas Simplex usadas para llegar a la solución (si existe). Si solo se desea obtener el resultado final, ponerlo en `False`.
 Los resultados que regresa el método son: la tabla Simplex final, la solución óptima x, el valor de la función objetivo en la solución óptima z, la matriz de restricciones alterada A', el vector de recursos alterado b' y el vector de costos relativos r.
 
+Si el P.P.L. introducido es no acotado, se alza una excepción y el método no acaba. Si el P.P.L. tiene una infinidad de soluciones óptimas, se notifica al usuario y se regresa la primer solución óptima a la que se llegó.
+
+## Explicación
+
+## Pseudocódigo
+
