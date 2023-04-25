@@ -93,4 +93,13 @@ obtenemos que
  
  ### Problema C
  <img width="199" alt="image" src="https://user-images.githubusercontent.com/61219691/234179477-7ef07c79-f606-476f-984a-b22b4461b039.png">
+ 
+ Una vez traducido a su forma estándar
+ 
+ <img width="522" alt="image" src="https://user-images.githubusercontent.com/61219691/234183411-a267f7a8-ddb0-42d8-8ac6-7f0444485cb2.png">
+
+obtenemos que 
+
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/61219691/234183466-dffd886a-ef8d-4caa-aef6-d6bff90eccaa.png">
+
 
