@@ -3,10 +3,6 @@ Implementación del método Simplex (de dos fases) para el proyecto de Programac
 
 Desarrollado por:
 - Pedro Olivares 190198
-- Sebastián Ibarra 193992
-- Rodrigo Uribe 196134
-- Claudio Guerrero 192617
-- Juan Pablo Macías 192984
 
 ## Contenido
 - [Cómo usar](#cómo-usar)
